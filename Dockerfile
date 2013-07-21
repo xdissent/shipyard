@@ -1,5 +1,6 @@
 FROM base
 MAINTAINER Evan Hazlett "ejhazlett@gmail.com"
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get -qq update
 RUN apt-get install -y python-dev python-setuptools libxml2-dev libxslt-dev libmysqlclient-dev supervisor redis-server git-core
 RUN easy_install pip
