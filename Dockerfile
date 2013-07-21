@@ -1,6 +1,6 @@
-FROM ubuntu:12.04
+FROM base
 MAINTAINER Evan Hazlett "ejhazlett@gmail.com"
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y python-dev python-setuptools libxml2-dev libxslt-dev libmysqlclient-dev supervisor redis-server git-core
 RUN easy_install pip
